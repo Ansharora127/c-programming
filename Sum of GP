@@ -1,0 +1,25 @@
+#include <stdlib.h>
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int a,n;
+    float r,sum=0;
+    printf("enter the first term\n");
+    printf("enter the common difference\n");
+    printf("enter the number of terms\n");
+    scanf("%d %f %d",&a,&r,&n);
+    if(r<0)
+    {
+        sum=a*(1-pow(r,n)-1)/(1-r);
+    }
+    else if(r>0)
+    {
+        sum=a*(pow(r,n)-1)/(r-1);
+
+    }
+    printf("sum is %f",sum);
+    return 0;
+
+}
