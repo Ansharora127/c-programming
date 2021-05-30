@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+   char answer;
+   int choice;
+   do
+   {
+        printf("Enter your choice 1(divisor) or 2(factorial):");
+        scanf("%d", &choice);
+        
+        if(choice==1)
+        {
+	      int x, i;
+	      printf("Input an integer: ");
+	      scanf("%d", &x);
+	      printf("All the divisor of %d are: ", x);
+	      for(i = 1; i <= x; i++) {
+	      	if((x%i) == 0){
+	      		printf("\n%d", i);
+	      		printf("\n");
+		} 
+	       }
+            }
+        
+        else if(choice==2)
+        {
+          int i=1,n,factorial=1;
+          printf("enter the number whose factorial is to be found:");
+          scanf("%d", &n);
+          printf("Factorial of %d is:",n);
+          
+          for(i=1;i<=n;i++)
+          {
+            factorial*=i;
+          }
+          printf("%d\n", factorial);
+        }
+        else
+        {
+          printf("enter a valid choice!");
+        }
+       printf("\n do u want to continue? \n->"); 
+       scanf("%s", &answer);
+     
+   }
+   while(answer== 'y'||answer== 'Y');
+  
+  
+   return 0;
+ 
+}
